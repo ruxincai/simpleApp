@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - homework@localhost" uuid="f3820ed0-56af-4287-9cc1-d6ac0de0f0f0">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>homework.pg_catalog homework.public</schema-pattern>
+      <default-schemas>homework.public</default-schemas>
+    </data-source>
+  </component>
+</project>

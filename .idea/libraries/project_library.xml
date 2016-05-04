@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="project library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/maven/annotations-15.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/avalon-framework-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/junit-3.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/logkit-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/postgresql-9.1-901-1.jdbc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/servlet-api-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/spring-core-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/spring-mock-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/maven/commons-lang3-3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

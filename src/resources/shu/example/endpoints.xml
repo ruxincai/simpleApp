@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints>
+	<endpoint name="text">
+		<!--end point for testing challenge 4-->
+		<method name="GET" handler="shu.example.handlers.GetText"/>
+		<default>
+			<method name="GET" handler="shu.example.handlers.GetText"/>
+		</default>
+	</endpoint>
+	<endpoint name="submissions">
+		<method name="GET" handler="shu.example.handlers.GetAllSubmissions"/>
+		<method name="POST" handler="shu.example.handlers.PostSubmission"/>
+		<default>
+			<method name="DELETE" handler="shu.example.handlers.DeleteSubmission"/>
+			<endpoint name="response">
+				<method name="POST" handler="shu.example.handlers.PostResponse"/>
+			</endpoint>
+		</default>
+	</endpoint>
+</endpoints>
