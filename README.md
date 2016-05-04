@@ -17,21 +17,21 @@ starting with "local"
 1. Build the project using IDEA.
 	* IDEA will ask if it should compile TypeScript files, say "No".
 1. At the command line run:
-	* `cd build/web`
+	* `cd target/web`
 	* `npm install`
 	* `npm run tsc-w`
 1. The last process compiles TypeScript to JavaScript and stays active waiting
 for changes.
 1. Deploy the application in Tomcat (the easiest way is to create a file with the
 content below and save it in {TOMCAT_HOME}/conf/Catalina/localhost/simpleApp.xml)
-	* `<Context docBase="{SIMPLE_APP_DIRECTORY}/build/web"/>`
+	* `<Context docBase="{SIMPLE_APP_DIRECTORY}/target/web"/>`
 1. Start Tomcat
-1. Open the application in a supported browser: `http://localhost:8080/simpleApp/`
+1. Open the application in a supported browsers (chrome/FF/Edge): `http://localhost:8080/simpleApp/`
 1. Access with ssl configuration
 	* https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html
 	* {java_home}/bin/keytool -genkey -alias tomcat -keyalg RSA
 	* uncomment the connector setting from tomcat's server.xml configuraiton file.
-		'<Connector protocol="org.apache.coyote.http11.Http11NioProtocol"
+	* '<Connector protocol="org.apache.coyote.http11.Http11NioProtocol"
 			   port="8443" maxThreads="200"
 			   scheme="https" secure="true" SSLEnabled="true"
 			   keystoreFile="${user.home}/.keystore" keystorePass="changeit"
