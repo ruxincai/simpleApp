@@ -31,8 +31,8 @@ content below and save it in {TOMCAT_HOME}/conf/Catalina/localhost/simpleApp.xml
 	* https://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html
 	* {java_home}/bin/keytool -genkey -alias tomcat -keyalg RSA
 	* uncomment the connector setting from tomcat's server.xml configuraiton file.
-	* '<Connector protocol="org.apache.coyote.http11.Http11NioProtocol"
+	  `<Connector protocol="org.apache.coyote.http11.Http11NioProtocol"
 			   port="8443" maxThreads="200"
 			   scheme="https" secure="true" SSLEnabled="true"
 			   keystoreFile="${user.home}/.keystore" keystorePass="changeit"
-			   clientAuth="false" sslProtocol="TLS"/>'
+			   clientAuth="false" sslProtocol="TLS"/>`
