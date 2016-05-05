@@ -8,9 +8,9 @@
 			 uri="antlib:org.apache.maven.artifact.ant"
 			 classpathref="maven-ant-tasks.classpath" />
 
-	<target name="dist" depends="compile, copy-resources, compile-tests"/>
+	<target name="dist" depends="compile, copy-resources, copy-web-resources, compile-tests"/>
 
-	<target name="integration" depends="dist, build-war"/>
+	<target name="integration" depends="dist"/>
 
 	<target name="-init-maven" unless="maven.initialized">
 		<mkdir dir="maven"/>
@@ -72,6 +72,13 @@
 		<copy todir="target/web">
 			<fileset dir="src/web"/>
 		</copy>
+		<copy todir="target/web/WEB-INF/lib">
+			<fileset dir="maven"/>
+		</copy>
+		<jar destfile="target/web/WEB-INF/lib/simpleApp.jar">
+			<fileset dir="target/production"/>
+			<fileset dir="src/resources"/>
+		</jar>
 	</target>
 
 	<target name="run-tests" depends="copy-resources">
@@ -90,20 +97,5 @@
 		<delete file="target/tests-failed" quiet="true"/>
 		<fail if="tests.failed" unless="test.xml">One or more tests failed</fail>
 	</target>
-
-<!--
-	<target name="build-war">
-		<mkdir dir="target/dist"/>
-		<zip destfile="target/dist/simpleApp.war">
-			<zipfileset dir="maven" prefix="WEB-INF/lib">
-				<include name="postgresql-9.1*.jar"/>
-				<include name="commons-lang3*.jar"/>
-				<include name="commons-logging-*.jar"/>
-				<include name="angular2*.jar"/>
-			</zipfileset>
-		</zip>
-	</target>
--->
-
 
 </project>

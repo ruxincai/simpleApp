@@ -7,6 +7,7 @@
           <element id="archive" name="simpleApp.jar">
             <element id="module-output" name="root" />
           </element>
+          <element id="library" level="project" name="project library" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="root/web/Web" />
