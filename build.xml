@@ -68,6 +68,12 @@
 			  todir="target/test/shu/example"/>
 	</target>
 
+	<target name="copy-web-resources">
+		<copy todir="target/web">
+			<fileset dir="src/web"/>
+		</copy>
+	</target>
+
 	<target name="run-tests" depends="copy-resources">
 		<delete file="target/tests-failed" quiet="true"/>
 		<mkdir dir="target/unittests"/>
@@ -85,6 +91,7 @@
 		<fail if="tests.failed" unless="test.xml">One or more tests failed</fail>
 	</target>
 
+<!--
 	<target name="build-war">
 		<mkdir dir="target/dist"/>
 		<zip destfile="target/dist/simpleApp.war">
@@ -96,6 +103,7 @@
 			</zipfileset>
 		</zip>
 	</target>
+-->
 
 
 </project>
