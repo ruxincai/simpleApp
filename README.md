@@ -12,6 +12,7 @@ starting with "local"
 1. Create your database called "homework":
 	* `dropdb -U postgres homework` _(if necessary)_
 	* `createdb -U postgres homework`
+	* 'psql -U postgres -d homework -f createdb.sql' from {SIMPLE_APP_DIRECTORY}/src/sql directory.
 1. Open the project with [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 1. Run `ant download` either from IDEA or from the command line.
 1. Build the project using IDEA.
