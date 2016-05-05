@@ -168,13 +168,20 @@ test-app > :first-child {
 test-app > form > label {
 	margin: 10px 0 4px;
 }
+test-app > form > div > span {
+	align-self: center;
+	margin: 1px;
+}
+test-app > form > .error {
+	margin-top: 40px;
+}
 test-app > #cityContainer {
 	margin-bottom: 10px;
 }
 test-app button {
 	width: 70px;
-	align-self: center;
-	margin-top: 20px;
+	align-self: flex-end;
+	margin-top: 10px;
 }
 test-app > :last-child {
 	display: flex;
@@ -199,10 +206,6 @@ test-submission > .row > span[class^="col"] {
 test-submission > :not(:first-child) {
 	margin: 5px 0 9px 39px;
 	display: list-item;
-}
-form > div > span {
-	align-self: center;
-	margin: 1px;
 }
 #cityContainer {
 	margin: 4px 0;
@@ -239,9 +242,11 @@ test-modal > * > :nth-child(3) {
 test-modal > * > :nth-child(3) > button {
 	margin-left: 10px;
 }
-
-#newResponseDialog {
-
+#newResponseDialog  > :nth-child(2) {
+	padding: 20px 0 10px;
+}
+#newResponseDialog textarea  {
+	width: 300px;
 }
 
 .spinner {

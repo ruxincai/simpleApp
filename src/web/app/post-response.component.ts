@@ -9,11 +9,10 @@ import {SubmissionService} from "./submission.service";
 	selector: 'test-modal',
 	template: `
 	<form id="newResponseDialog" (ngSubmit)="add()">
-	<div>Create Response</div>
+	<div>Create Response for {{submission.userName}}</div>
 	<div class="column">
 	<div class="row">
-    <label>Name</label>
-    <input #input type="text" size="22" [value]="responseText" (input)="setValue(input.value)">
+    <textarea rows="3" [value]="responseText" (input)="setValue($event)"></textarea>
     </div>
     <div *ngIf="msg !== null" class="row error">{{msg}}</div>
 	</div>
@@ -35,10 +34,11 @@ export class NewResponse extends Dialog {
 		this.service = data.service;
 	}
 
-	setValue(name: string) {
+	setValue(event: any) {
 		this.msg = null;
-		if (name !== '') {
-			this.responseText = name;
+		let value = event.target.value;
+		if (value !== '') {
+			this.responseText = value;
 		}
 		else {
 			this.msg = 'The response text is required';
