@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <name>simpleApp</name>
 
+    <!--test-->
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -54,5 +56,6 @@
             <version>2.0.0-beta.17</version>
         </dependency>
     </dependencies>
+
 
 </project>
