@@ -24,6 +24,7 @@
 			<fileset refid="project.dependencies" />
 			<mapper type="flatten" />
 		</copy>
+		<delete file="maven/log4j-1.2.12.jar"/>
 	</target>
 
 	<target name="compile" depends="download">
@@ -89,8 +90,10 @@
 				<fileset dir="maven">
 					<include name="**/*.jar" />
 				</fileset>
-				<pathelement location="target"/>
+				<pathelement location="target/production"/>
+				<pathelement location="target/test"/>
 			</classpath>
+			<formatter type="plain" usefile="false"/>
 			<test name="shu.example.APITest" outfile="target/tests-failed"/>
 		</junit>
 		<available file="target/tests-failed" property="tests.failed"/>
